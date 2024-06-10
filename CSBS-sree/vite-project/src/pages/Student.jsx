@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Sympo from "../Components/Sympo";
@@ -75,9 +75,9 @@ const Student = () => {
   };
 
   return (
-    <div className=" p-5 flex justify-center items-center">
-      <div className="max-w-lg w-full   max-sm:max-w-[320px] max-sm:mx-auto ">
-        <h1 className="font-jomolhari text-3xl text-center border-2">
+    <div className="font-popins p-5 flex justify-center items-center">
+      <div className="max-w-lg w-full max-sm:max-w-[320px] max-sm:mx-auto ">
+        <h1 className="font-popins text-3xl text-center border-2">
           Student Form
         </h1>
         <form onSubmit={handleSubmit} className="py-8 border-2  px-2">
@@ -91,7 +91,7 @@ const Student = () => {
                 name="name"
                 placeholder="Name"
                 onChange={handleInputChange}
-                className="text-center rounded-xl outline-none mt-1"
+                className="text-center rounded-md outline-none mt-1 h-8"
                 required
               />
             </div>
@@ -104,7 +104,7 @@ const Student = () => {
                 name="rollNo"
                 placeholder="Roll no"
                 onChange={handleInputChange}
-                className="text-center rounded-xl outline-none mt-1"
+                className="text-center rounded-md outline-none mt-1 h-8"
                 required
               />
             </div>
@@ -117,7 +117,7 @@ const Student = () => {
                 name="regNo"
                 placeholder="Register no"
                 onChange={handleInputChange}
-                className="text-center rounded-xl outline-none mt-1"
+                className="text-center rounded-md outline-none mt-1 h-8"
                 required
               />
             </div>
@@ -130,11 +130,11 @@ const Student = () => {
                 name="mail"
                 placeholder="Email ID"
                 onChange={handleInputChange}
-                className="text-center rounded-xl outline-none mt-1"
+                className="text-center rounded-md outline-none mt-1 h-8"
                 required
               />
             </div>
-            <div className="flex justify-between">
+            <div className=" flex justify-between">
               <label htmlFor="age" className="text-xl">
                 Age:
               </label>
@@ -143,7 +143,7 @@ const Student = () => {
                 name="age"
                 placeholder="Age"
                 onChange={handleInputChange}
-                className="text-center rounded-xl outline-none mt-1"
+                className="text-center rounded-md outline-none mt-1 h-8"
                 required
               />
             </div>
@@ -151,7 +151,11 @@ const Student = () => {
               <label htmlFor="age" className="text-xl">
                 Batch:
               </label>
-              <select name="batch" onChange={handleInputChange}>
+              <select
+                name="batch"
+                className="w-48"
+                onChange={handleInputChange}
+              >
                 <option value="">Select the batch</option>
                 {batches.map((batch) => (
                   <option value={batch}>{batch}</option>
@@ -166,7 +170,7 @@ const Student = () => {
                 type="date"
                 name="dob"
                 onChange={handleInputChange}
-                className="text-center rounded-xl outline-none mt-1"
+                className="text-center rounded-md outline-none mt-1 h-8 w-48"
                 required
               />
             </div>
@@ -208,7 +212,7 @@ const Student = () => {
                 name="phoneNo"
                 placeholder="Student phone no"
                 onChange={handleInputChange}
-                className="text-center rounded-xl outline-none mt-1"
+                className="text-center rounded-md outline-none mt-1 h-8"
                 required
               />
             </div>
@@ -221,7 +225,7 @@ const Student = () => {
                 name="fatherName"
                 placeholder="Father Name"
                 onChange={handleInputChange}
-                className="text-center rounded-xl outline-none mt-1"
+                className="text-center rounded-md outline-none mt-1 h-8"
                 required
               />
             </div>
@@ -234,7 +238,7 @@ const Student = () => {
                 name="fatherPhone"
                 placeholder="Father phone no"
                 onChange={handleInputChange}
-                className="text-center rounded-xl outline-none mt-1"
+                className="text-center rounded-md outline-none mt-1 h-8"
                 required
               />
             </div>
@@ -246,7 +250,7 @@ const Student = () => {
                 type="text"
                 name="motherName"
                 placeholder="Mother Name"
-                className="text-center rounded-xl outline-none mt-1"
+                className="text-center rounded-md outline-none mt-1 h-8"
                 onChange={handleInputChange}
                 required
               />
@@ -260,7 +264,7 @@ const Student = () => {
                 name="motherPhone"
                 placeholder="Mother phone no"
                 onChange={handleInputChange}
-                className="text-center rounded-xl outline-none mt-1"
+                className="text-center rounded-md outline-none mt-1 h-8"
                 required
               />
             </div>
@@ -273,19 +277,19 @@ const Student = () => {
                 name="address"
                 placeholder="Address"
                 onChange={handleInputChange}
-                className="text-center rounded-xl outline-none mt-1"
+                className="text-center rounded-md outline-none mt-1 h-8"
                 required
               />
             </div>
             <div className="flex justify-between">
               <label htmlFor="mark10" className="text-xl">
-                Enter your 10th mark and percentage:
+                Enter your 10th percentage:
               </label>
               <input
                 type="number"
                 name="tenthPercentage"
                 placeholder="10th Mark"
-                className="text-center rounded-xl outline-none mt-1"
+                className="text-center rounded-md outline-none mt-1 h-8"
                 onChange={handleInputChange}
                 required
               />
@@ -297,7 +301,7 @@ const Student = () => {
               <input
                 type="file"
                 name="tenthMarksheet"
-                className="text-center rounded-xl outline-none mt-1"
+                className="text-center lg:ml-40 rounded-md outline-none mt-1 h-8 "
                 onChange={handleFileChange}
                 required
               />
@@ -311,7 +315,7 @@ const Student = () => {
                 name="twelthPercentage"
                 placeholder="12th Mark"
                 onChange={handleInputChange}
-                className="text-center rounded-xl outline-none mt-1"
+                className="text-center rounded-md outline-none mt-1 h-8"
               />
             </div>
             <div className="flex justify-between">
@@ -322,7 +326,7 @@ const Student = () => {
                 type="file"
                 name="twelthMarksheet"
                 onChange={handleFileChange}
-                className="text-center rounded-xl  outline-none mt-1"
+                className=" text-center lg:ml-40 rounded-md  outline-none mt-1 h-8"
               />
             </div>
             <div className="flex justify-between">
@@ -334,7 +338,7 @@ const Student = () => {
                 name="polytechnicPercentage"
                 placeholder="12th Mark"
                 onChange={handleInputChange}
-                className="text-center rounded-xl outline-none mt-1"
+                className="text-center rounded-md outline-none mt-1 h-8"
               />
             </div>
             <div className="flex justify-between">
@@ -345,7 +349,7 @@ const Student = () => {
                 type="file"
                 name="polytechnicMarksheet"
                 onChange={handleFileChange}
-                className="text-center rounded-xl  outline-none mt-1"
+                className="text-center lg:ml-32 rounded-md outline-none mt-1 h-8"
               />
             </div>
             <button

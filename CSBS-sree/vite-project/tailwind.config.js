@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         jomolhari: ["Jomolhari", "serif"],
+        popins: ["popins"],
       },
       colors: {
         blue1: "#C0D6E8",
