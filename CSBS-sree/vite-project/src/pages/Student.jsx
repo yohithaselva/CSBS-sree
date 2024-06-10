@@ -174,7 +174,6 @@ const Student = () => {
                 required
               />
             </div>
-
             <div className="flex flex-col">
               <label className="text-xl">Gender:</label>
               <div className="flex justify-around">
@@ -201,6 +200,18 @@ const Student = () => {
                   Female
                 </label>
               </div>
+            </div>
+            <div className="flex justify-between">
+              <label htmlFor="photo" className="text-xl">
+                Upload your professional photo:
+              </label>
+              <input
+                type="file"
+                name="photo"
+                className="text-center lg:ml-36 rounded-md outline-none mt-1 h-8 "
+                onChange={handleFileChange}
+                required
+              />
             </div>
 
             <div className="flex justify-between">
@@ -243,6 +254,19 @@ const Student = () => {
               />
             </div>
             <div className="flex justify-between">
+              <label htmlFor="fatheroccup" className="text-xl">
+                Enter the father occupation:
+              </label>
+              <input
+                type="text"
+                name="fatheroccup"
+                placeholder="Father Occupation"
+                className="text-center rounded-md outline-none mt-1 h-8"
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <div className="flex justify-between">
               <label htmlFor="motherName" className="text-xl">
                 Mother Name:
               </label>
@@ -269,6 +293,32 @@ const Student = () => {
               />
             </div>
             <div className="flex justify-between">
+              <label htmlFor="motheroccup" className="text-xl">
+                Enter the father occupation:
+              </label>
+              <input
+                type="text"
+                name="motheroccup"
+                placeholder="Mother Occupation"
+                className="text-center rounded-md outline-none mt-1 h-8"
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <div className="flex justify-between">
+              <label htmlFor="annualin" className="text-xl">
+                Enter the Annual Income:
+              </label>
+              <input
+                type="number"
+                name="annualin"
+                placeholder="Annual Income"
+                className="text-center rounded-md outline-none mt-1 h-8"
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <div className="flex justify-between">
               <label htmlFor="address" className="text-xl">
                 Address:
               </label>
@@ -280,6 +330,99 @@ const Student = () => {
                 className="text-center rounded-md outline-none mt-1 h-8"
                 required
               />
+            </div>
+            <div className="flex justify-between">
+              <label htmlFor="community" className="text-xl">
+                Enter the Community:
+              </label>
+              <input
+                type="text"
+                name="community"
+                placeholder="Enter the community"
+                className="text-center rounded-md outline-none mt-1 h-8"
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <div className="flex justify-between">
+              <label htmlFor="emisno" className="text-xl">
+                EMIS no:
+              </label>
+              <input
+                type="text"
+                name="emisno"
+                placeholder="Enter your emis no"
+                onChange={handleInputChange}
+                className="text-center rounded-md outline-none mt-1 h-8"
+                required
+              />
+            </div>
+            <div className="flex justify-between">
+              <label htmlFor="aadhar" className="text-xl">
+                Enter the Aadhar Card No:
+              </label>
+              <input
+                type="text"
+                name="aadhar"
+                placeholder="Aadhar No"
+                className="text-center rounded-md outline-none mt-1 h-8"
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <div className="flex flex-col">
+              <label className="text-xl">First Graduate:</label>
+              <div className="flex justify-around">
+                <label className="text-xl">
+                  <input
+                    type="radio"
+                    name="1stgraduate"
+                    value="Yes"
+                    onChange={handleInputChange}
+                    className="mr-2"
+                    required
+                  />
+                  Yes
+                </label>
+                <label className="text-xl">
+                  <input
+                    type="radio"
+                    name="2ndgraduate"
+                    value="No"
+                    onChange={handleInputChange}
+                    className="mr-2"
+                    required
+                  />
+                  No
+                </label>
+              </div>
+            </div>
+            <div className="flex flex-col">
+              <label className="text-xl">Quota:</label>
+              <div className="flex justify-around">
+                <label className="text-xl">
+                  <input
+                    type="radio"
+                    name="Quota"
+                    value="govt"
+                    onChange={handleInputChange}
+                    className="mr-2"
+                    required
+                  />
+                  govt
+                </label>
+                <label className="text-xl">
+                  <input
+                    type="radio"
+                    name="Quotamgt"
+                    value="Management"
+                    onChange={handleInputChange}
+                    className="mr-2"
+                    required
+                  />
+                  management
+                </label>
+              </div>
             </div>
             <div className="flex justify-between">
               <label htmlFor="mark10" className="text-xl">
